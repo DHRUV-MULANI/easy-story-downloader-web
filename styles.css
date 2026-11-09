@@ -294,6 +294,36 @@ h1 {
   font-size: 1.1rem;
 }
 
+/* Screenshots */
+.shots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.shots figure {
+  margin: 0;
+  background: var(--surface);
+  border: 1px solid rgba(0, 121, 107, .10);
+  border-radius: 22px;
+  padding: 10px;
+  box-shadow: 0 14px 34px rgba(0, 60, 52, .08);
+}
+
+.shots img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+.shots figcaption {
+  font-size: .84rem;
+  font-weight: 700;
+  color: var(--teal-900);
+  text-align: center;
+  padding: 10px 4px 4px;
+}
+
 /* Steps */
 .steps { display: grid; gap: 16px; margin-top: 10px; }
 
@@ -396,12 +426,14 @@ details p { margin: 10px 0 0; color: var(--muted); }
   .hero-card { order: -1; }
   .phone { width: min(300px, 86vw); }
   .grid { grid-template-columns: repeat(2, 1fr); }
+  .shots { grid-template-columns: repeat(2, 1fr); }
   .download-card { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 620px) {
   .nav-links { display: none; }
   .grid { grid-template-columns: 1fr; }
+  .shots { grid-template-columns: 1fr; }
   .hero { padding-top: 40px; }
   .section { padding: 48px 0; }
   .wrap { width: calc(100% - 28px); }
